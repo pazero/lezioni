@@ -1,0 +1,24 @@
+from random import randint
+print("Benvenuto in programma fortunello!")
+numero = int(input("Tra quante persone devo estrarre? "))
+#creo una lista con tutti i numeri da 1 a numero+1
+lista=list(range(1, numero+1))
+#chiedo i giustificati e li tolgo dalla lista
+termina_giustificati="N"
+while(termina_giustificati=="N"):
+	print("inserisci il numero del giustificato, o 0 per terminare")
+	g = int(input())
+	if (g == 0):
+		termina_giustificati = "S"
+	else:
+		#elimino il giusificato dalla lista
+		i = 0
+		while (i < len(lista)):
+			if (lista[i] == g):
+				del lista[i]
+			i = i + 1
+#estraggo un elemento della lista
+n = randint(0,len(lista)-1)
+print("Il fortunello di oggi è............")
+input()
+print(lista[n])
