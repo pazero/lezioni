@@ -1,0 +1,130 @@
+print("Ciao!")
+print("Inserisci l'user:")
+user = input("")
+print()
+print("Inserisci la password:")
+password = input("")
+while user != "pinco" or password != "pallino":
+    print()
+    print("L'USER O LA PASSWORD NON SONO CORRETTI!")
+    print()
+    user = input("Inserisci nuovamente l'user:")
+    print()
+    password = input("Inserisci nuovamente la password:")
+print()
+print("L'user e la password sono giusti...")
+input("PREMI INVIO PER CONTINUARE")
+print()
+print("Pronto a giocare?")
+print("A. si")
+print("B. no")
+risposta = input().upper()
+while risposta == "B":
+    print("Dai preparati!!!")
+    print("Ora sei pronto??")
+    print("A. si")
+    print("B. no")
+    risposta0 = input().upper()
+    if risposta0 == "A":
+        break
+input("Bene! PREMI INVIO PER COMINCIARE!")
+nome = input("Inserisci il nome del tuo personaggio:")
+anni = int(input("Inserisci l'età del tuo personaggio:"))
+print()
+print("Ti stai preparando per un colloquio di lavoro")
+print("Hai appena messo le scarpe e devi decidere come andarci")
+print("Cosa fai?")
+print()
+print("A.prendi la bici")
+print("B.vai in moto")
+risposta1 = input().upper()
+
+if risposta1 == "A":
+	print("Hai deciso di prendere la bici!")
+	print("La tiri fuori dal garage e parti")
+else:
+	print("Prendi la moto, ma ti accorgi che non si accende")
+	print("Non hai tempo di pensare a cosa fare quindi prendi la bici e vai")
+
+print()
+print("Pedali per un po' e arrivi ad un semaforo")
+print("Sta per diventare rosso. Devi decidere se: ")
+print("A.tentare lo stesso di attraversare")
+print("B.fermarti e aspettare il verde")
+risposta2 = input().upper()
+
+if risposta2 == "B":
+	print("Bravo! Hai aspettato il verde e sei passato")
+	
+print("Strada attraversata!")
+print("Sei in ritardo e cominci ad accelerare.")
+print("All'improvviso senti un 'clack'...")
+print("Guardi verso il telaio e ti accorgi che la catena è caduta")
+print("E ora?")
+print("A.rischiando di sporcarti tenti di metterla a posto")
+print("B.continui a piedi per paura di macchiarti")
+risposta3 = input().upper()
+
+if risposta3 == "A":
+	print("Sei riuscito a mettere a posto la bici, però hai tutte le mani sporche e non hai nulla per pulirti.")
+	print("Mentre ti dirigi verso l'ufficio, incontri un tuo amico")
+	print("Potresti chiedergli un fazzoletto...")
+	print("A.ti fermi e glielo chiedi")
+	print("B.ti vergogni e vai dritto")
+	risposta4 = input().upper()
+	
+	if risposta4 == "A":
+		print("Il tuo amico ti dà volentieri il fazzoletto e ora hai le mani pulite.")
+		print("Lo saluti velocemente e ti rechi in ufficio")
+	else:
+		print("Decidi che appena arrivato andrai in bagno")
+else:
+	print("Hai deciso di andare a piedi,")
+	print("quando a un certo punto vedi un tuo amico.")
+	print("Cosa fai?")
+	print("A.lo fermi per chiedere aiuto")
+	print("B.eviti di perdere altro tempo e vai per la tua strada")
+	risposta5 = input().upper()
+	
+	if risposta5 == "A":
+                print("Il tuo amico riesce ad aggiustarti la catena velocemente")
+                print("Lo ringrazi e riparti")
+		
+print()
+print("SEI FINALMENTE ARRIVATO!!!")
+print("Consegni il curriculum alla segretaria e aspetti qualche minuto")
+print("-Ciao" ,nome, ",abbiamo esaminato il tuo profilo-")
+if anni >= 18 and anni <40:
+        print("-Hai l'età giusta per procedere al colloquio col direttore-")
+        print("Hai parlato con il capo per più di mezz'ora...")
+        input("PREMI INVIO PER SCOPRIRE SE SEI STATO ASSUNTO")
+              
+        if risposta3 == "A" and risposta4 == "B":
+            print()
+            print("Appena arrivato in ufficio non hai trovata un bagno,")
+            print("quindi la segretaria ha riferito al dirigente")
+            print("che sei arrivato in modo impresentabile per via delle mani sporche!")
+            print()
+            print("HAI FATTO TUTTA QUESTA FATICA PER NIENTE!!!")
+            print("Torni a casa deluso e decidi che la prossima volta sarai attento ad avere le mani pulite")
+        else:
+            print("")
+            print("Sei stato assunto!")
+            print("Complimenti per avere eseguito tutte le scelte correttamente!")
+            print("E soprattutto per essere arrivato con le mani pulite!")
+            
+else:
+    input("PREMI INVIO PER SCOPRIRE COSA TI DICE LA SEGRETARIA")
+    print("-Mi dispiace, ma non avendo l'età giusta non puoi lavorare per noi-")
+    print("...")
+    print("HAI FATTO TUTTA QUESTA FATICA PER NIENTE!")
+    print("Torni a casa deluso")
+print("")
+print("Arrivederci",nome,", grazie per aver giocato con me!")
+print("THE")
+print("END")
+
+
+
+
+
