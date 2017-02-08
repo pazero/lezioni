@@ -1,0 +1,71 @@
+print("Quale tra questi è il poligono del quale bisogna trovare l'area?")
+print("A.quadrato")
+print("B.rettangolo")
+print("C.parallelogramma")
+print("D.rombo")
+print("E.deltoide")
+print("F.cerchio")
+print("G.trapezio")
+poligono = input().upper()
+print("Vuoi sapere i passaggi effettuati per arrivare al risultato?")
+print("A. si")
+print("B. no")
+passaggi = input().upper()
+if poligono == "B" or poligono == "C":
+	base = float(input("Inserisci la misura della base: "))
+	altezza = float(input("Inserisci la misura dell'altezza: "))
+	if passaggi == "A":
+		print("La formula da utilizzare è: b x h")
+		print()
+		print("Quindi--> area=" , base, "x" , altezza)
+		print()
+		input("Premi invio per sapere il risultato")
+	print()
+	print("L'area é:" , base*altezza)
+if poligono == "A":
+	lato = float(input("Inserisci la misura del lato del quadrato: "))
+	areaq = lato*lato
+	if passaggi == "A":
+		print()
+		print("La formula da utilizzare é: lato^2")
+		print()
+		print("Quindi--> area=" , lato, "x" , lato)
+		print()
+		input("Premi invio per sapere il risultato")
+	print()
+	print("L'area è:" , areaq)
+if poligono == "D" or poligono == "E":
+	Dm = float(input("Inserisci la misura della diagonale maggiore: "))
+	dm = float(input("Inserisci la misura della diagonale minore: "))
+	
+	if passaggi == "A":
+		print()
+		print("La formula da utilizzare è: (D x d)/2")
+		print()
+		print("Quindi--> area=(" , Dm ,"x" , dm ,")/2")
+		print()
+		input("Premi invio per sapere il risultato")
+	print()
+	print("L'area è:" , (Dm*dm)/2)
+if poligono == "F":
+	raggio = float(input("Inserisci la misura del raggio: "))
+	if passaggi == "A":
+		print("La formula da utilizzare è: r^2 x 3,141592")
+		print()
+		print("Quindi--> area=" , raggio ,"^2 x 3.141592...")
+		print()
+		input("Premi invio per sapere il risultato")
+	print()
+	print("L'area è:" , raggio**2*3.141592)
+
+if poligono == "G":
+	Bm = float(input("Inserisci la misura della base maggiore: "))
+	bm = float(input("Inserisci la misura della base minore: "))
+	ht = float(input("Inserisci la misura dell'altezza: "))
+	if passaggi == "A":
+		print()
+		print("La formula da utilizzare è: [(B+b) x h]/2")
+		print()
+		print("Quindi--> area=[(" , Bm ,"+" , bm ,")x" , ht ,"]/2")
+	print()
+	print("L'area è:" , ((Bm+bm)*ht)/2)
