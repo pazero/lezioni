@@ -1,0 +1,20 @@
+from random import randint
+numero = randint(1, 100)
+tentativi = 0
+print("indovina a quale numero sto pensando da",1,"a",100)
+
+while True:
+  tentativi += 1
+  a = int(input("inserisci un numero: "))
+  if a > numero:
+    print(a, "e' troppo grande")
+  elif a < numero:
+    print(a, "e' troppo piccolo")
+  else:
+    break
+
+print("HAI INDOVINATO IN ", tentativi, "TENTATIVI")
+if tentativi > 10:
+  print("Puoi fare di meglio...")
+else:  
+  print("Bravo ci hai messo poco!")
