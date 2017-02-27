@@ -1,0 +1,38 @@
+materia = input("Di quale materia devo calcolare la media?").upper()
+voti = []
+print("Inserisci il voto o 0 per terminare")
+v = float(input())
+voti.append(v)
+n = 1
+while v != 0:
+	v = float(input())
+	voti.append(v)
+	n += 1
+	if v > 10:
+		print()
+		print("Non è possibile che tu abbia preso un voto più alto di 10!")
+		print("Inserisci il prossimo voto o 0 per terminare")
+		voti.remove(v)
+		n -= 1
+	elif v < 0:
+		print()
+		print("Non è possibile che tu abbia preso un voto più basso di 0!")
+		print("Inserisci il prossimo voto o 0 per terminare")
+		voti.remove(v)
+		n -= 1
+n -= 1
+voti.remove(v)
+max = len(voti)
+s = 0
+for i in range(0,max): 
+	s += voti[i] 
+media = (s/n)
+print()
+print("I tuoi voti in",materia,"sono:")
+print()
+for j in range(0,max):
+	print(voti[j])
+	print()
+print("La tua media in",materia,"é:")
+print()
+print(media)
