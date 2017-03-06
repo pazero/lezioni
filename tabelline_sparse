@@ -27,7 +27,6 @@ while True:
 		while (i < len(numeri)):
 			if (numeri[i] == j):
 				del numeri[i]
-				print(numeri)
 			i = i + 1
 	if n > 6:
 		break
