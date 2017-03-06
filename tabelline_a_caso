@@ -1,0 +1,55 @@
+from random import randint
+print("Ora ti chiederò delle tabelline sparse!")
+print()
+insulti = ["Sei un asino!","Sei un semo!","Ma sei rincoglionito?","Ma povca...","Ma scherzi?!"]
+complimenti = ["Bravo!","GRANDE!","Risposta corretta!","Sempre sul pezzo vezz!:)","La sai!"]
+n = 0
+v = 0
+while True:
+	v += 1
+	numerix = [0,1,2,3,4,5,6,7,8,9,10]
+	numeriy = [0,1,2,3,4,5,6,7,8,9,10]
+	for k in range(1,12):	
+		i = 0
+		c = 0
+		x = numerix[randint(0,len(numerix)-1)]
+		y = numeriy[randint(0,len(numeriy)-1)]
+		print(x,"x",y,"=")
+		r = int(input())
+		p = x*y
+		if r == p:
+			print()
+			complimento = complimenti[randint(0,4)]
+			print(complimento)
+			n += 1
+		else:
+			print()
+			insulto = insulti[randint(0,4)]
+			print(insulto)
+		while (i < len(numerix)):
+			if (numerix[i] == x):
+				del numerix[i]
+			i += 1
+		while (c < len(numeriy)):
+			if (numeriy[c] == y):
+				del numeriy[c]
+			c += 1
+	if n > 6:
+		break
+	else:
+		if n == 1:
+			print()
+			print("Hai fatto bene solo 1 tabellina!")
+		else:
+			print()
+			print("Hai fatto bene solo",n,"tabelline!")
+		print("Quindi ora te ne chiedo altre!")
+		print()
+if v > 0:
+	print("Hai risposto bene a",n,"tabelline")
+	print()
+	print("Hai terminato l'esercitazione in",v,"volte!")
+else:
+	print("Hai risposto bene a",n,"tabelline")
+	print()
+	print("Esercitazione terminata velocemente!")
