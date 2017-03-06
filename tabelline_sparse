@@ -1,0 +1,46 @@
+from random import randint
+insulti = ["Sei un asino!","Sei un semo!","Ma sei rincoglionito?","Ma povca...","Ma scherzi?!"]
+complimenti = ["Bravo!","GRANDE!","Risposta corretta!","Sempre sul pezzo vezz!:)","La sai!"]
+v = 0
+n = 0
+numeri = [0,1,2,3,4,5,6,7,8,9,10]
+while True:
+	n = 0
+	v += 1
+	x = int(input("Quale tabellina devo chiederti?"))
+	i = 0
+	j = 0
+	for z in range(1,12):
+		i = 0
+		j = numeri[randint(0,len(numeri)-1)]
+		print()
+		print(x,"x",j,"=")
+		r = int(input())
+		p = x*j
+		if r == p:
+			complimento = complimenti[randint(0,4)]
+			print(complimento)
+			n += 1
+		else:
+			insulto = insulti[randint(0,4)]
+			print(insulto)
+		while (i < len(numeri)):
+			if (numeri[i] == j):
+				del numeri[i]
+				print(numeri)
+			i = i + 1
+	if n > 6:
+		break
+	else:
+		print()
+		print("Hai fatto bene solo",n,"risposte... Ti chiedo un'altra tabellina!")
+		print()
+if v > 10:
+	print()
+	print("Interrogazione terminata dopo",v,"tabelline... FAI UN PO' SCHIFO!")
+elif 1 < v <10:
+	print()
+	print("Interrogazione terminata dopo",v,"tabelline... puoi fare di meglio!")
+elif v == 1:
+	print()
+	print("Complimenti! Interrogazione terminata velocemente!")
