@@ -1,0 +1,155 @@
+from random import randint
+insulti = ["Sei un asino!","Sei un semo!","Ma sei rincoglionito?","Ma povca...","Ma scherzi?!"]
+complimenti = ["Bravo!","GRANDE!","Risposta corretta!","Sempre sul pezzo vezz!:)","La sai!"]
+n = 0
+v = 0
+while True:
+	print("Come ti devo chiedere le tabelline?")
+	print()
+	print("A.tu mi dici la tabellina e io te le chiedo in ordine")
+	print()
+	print("B.tu mi dici la tabellina e io te le chiedo sparse")
+	print()
+	print("C.ti chiedo delle tabelline sparse")
+	risposta = input().upper()
+	if risposta == "A":
+		while True:
+			v += 1
+			print()
+			x = int(input("Quale tabellina devo chiederti?"))
+			for y in range(0,11):
+				print()
+				print(x,"x",y,"=")
+				r = int(input())
+				p = x*y
+				if r == p:
+					complimento = complimenti[randint(0,4)]
+					print(complimento)
+					n += 1
+				else:
+					insulto = insulti[randint(0,4)]
+					print(insulto)
+			if n > 6:
+				break
+			else:
+				print()
+				print("Hai fatto bene solo",n,"risposte... Ti chiedo un'altra tabellina!")
+				print()
+		if v > 10:
+			print()
+			print("Interrogazione terminata dopo",v,"tabelline... FAI UN PO' SCHIFO!")
+		elif 1 < v <10:
+			print()
+			print("Interrogazione terminata dopo",v,"tabelline... puoi fare di meglio!")
+		elif v == 1:
+			print()
+			print("Complimenti! Interrogazione terminata velocemente!")
+	elif risposta == "B":
+		while True:
+			numeri = [0,1,2,3,4,5,6,7,8,9,10]
+			n = 0
+			v += 1
+			print()
+			x = int(input("Quale tabellina devo chiederti?"))
+			i = 0
+			j = 0
+			for z in range(1,12):
+				i = 0
+				j = numeri[randint(0,len(numeri)-1)]
+				print()
+				print(x,"x",j,"=")
+				r = int(input())
+				p = x*j
+				if r == p:
+					complimento = complimenti[randint(0,4)]
+					print(complimento)
+					n += 1
+				else:
+					insulto = insulti[randint(0,4)]
+					print(insulto)
+				while (i < len(numeri)):
+					if (numeri[i] == j):
+						del numeri[i]
+					i = i + 1
+			if n > 6:
+				break
+			else:
+				print()
+				print("Hai fatto bene solo",n,"risposte... Ti chiedo un'altra tabellina!")
+				print()
+		if v > 10:
+			print()
+			print("Interrogazione terminata dopo",v,"tabelline... FAI UN PO' SCHIFO!")
+		elif 1 < v <10:
+			print()
+			print("Interrogazione terminata dopo",v,"tabelline... puoi fare di meglio!")
+		elif v == 1:
+			print()
+			print("Complimenti! Interrogazione terminata velocemente!")
+	elif risposta == "C":
+		while True:
+			print()
+			print("Bene cominciamo!")
+			v += 1
+			numerix = [0,1,2,3,4,5,6,7,8,9,10]
+			numeriy = [0,1,2,3,4,5,6,7,8,9,10]
+			for k in range(1,12):	
+				i = 0
+				c = 0
+				x = numerix[randint(0,len(numerix)-1)]
+				y = numeriy[randint(0,len(numeriy)-1)]
+				print(x,"x",y,"=")
+				r = int(input())
+				p = x*y
+				if r == p:
+					print()
+					complimento = complimenti[randint(0,4)]
+					print(complimento)
+					n += 1
+				else:
+					print()
+					insulto = insulti[randint(0,4)]
+					print(insulto)
+				while (i < len(numerix)):
+					if (numerix[i] == x):
+						del numerix[i]
+					i += 1
+				while (c < len(numeriy)):
+					if (numeriy[c] == y):
+						del numeriy[c]
+					c += 1
+			if n > 6:
+				break
+			else:
+				if n == 1:
+					print()
+					print("Hai fatto bene solo 1 tabellina!")
+				else:
+					print()
+					print("Hai fatto bene solo",n,"tabelline!")
+					print()
+					print("Quindi ora te ne chiedo altre!")
+					print()
+		if v == 1:
+			print("Hai risposto bene a",n,"tabelline")
+			print()
+			print("Hai terminato l'esercitazione velocemente")
+		if v > 1:
+			print("Hai risposto bene a",n,"tabelline")
+			print()
+			print("Hai terminato l'esercitazione in",v,"volte!")
+		else:
+			print("Hai risposto bene a",n,"tabelline")
+			print()
+			print("Esercitazione terminata velocemente!")
+	print()
+	print("E ora cosa vuoi fare?")
+	print("A. Terminare l'esercitazione")
+	print("B. Ripetere l'esercitazione")
+	risposta1 = input().upper()
+	if risposta == "A":
+		break
+	else:
+		print()
+print()
+print("Fine!")
