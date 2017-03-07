@@ -1,6 +1,8 @@
 from math import sqrt
 a = float(input("Inserisci il valore di a"))
+print()
 b = float(input("Inserisci il valore di b"))
+print()
 c = float(input("Inserisci il valore di c"))
 d = b**2-4*a*c
 if d > 0:
@@ -9,13 +11,33 @@ if d > 0:
 	x1 = float(z/(2*a))
 	z1 = float(-b-sqrt(d))
 	x2 = float(z1/(2*a))
+	print()
+	print("delta>0")
+	print("Quindi questa equazione di 2^ grado ammette 2 soluzioni reali distinte")
+	print()
+	print("x1 =",-b,"+rad",d,") /",2*a)
+	print()
+	print("x2 =",-b,"-rad",d,") /",2*a)
+	print()
 	print("S = [",x1,";",x2,"]")
 if d == 0:
 	x1 = float(-b/(2*a))
 	x2 = x1
+	print()
+	print("delta=0")
+	print("Quindi questa equazione di 2^ grado ammette due soluzioni reali coincidenti")
+	print()
+	print("x1 =",-b,"/",2*a)
+	print()
+	print("x2 =",-b,"/",2*a)
+	print()
 	print("S = [",x1,";",x2,"]")
 if d < 0:
 	d = -(b**2-4*a*c)
+	print()
+	print("delta<0")
+	print("Quindi questa equazione di 2^ grado ammette due soluzioni complesse coniugate")
+	print()
 	print("S = [",-b,"/",2*a,"+ i(rad",d,") /",2*a,";")
 	print("     ",-b,"/",2*a,"- i(rad",d,") /",2*a,"]")
 	
