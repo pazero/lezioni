@@ -11,6 +11,8 @@ while True:
 	print("B.tu mi dici la tabellina e io te le chiedo sparse")
 	print()
 	print("C.ti chiedo delle tabelline sparse")
+	print()
+	print("D. ti chiedo delle tabelline sparse finchè non sai abbastanza giuste")
 	risposta = input().upper()
 	if risposta == "A":
 		while True:
@@ -142,12 +144,50 @@ while True:
 			print("Hai risposto bene a",n,"tabelline")
 			print()
 			print("Esercitazione terminata velocemente!")
+	elif risposta == "D":
+		t = 0
+		while True:
+			nx = [0,1,2,3,4,5,6,7,8,9,10]
+			ny = [0,1,2,3,4,5,6,7,8,9,10]
+			for k in range(1,12):
+				t += 1
+				i = 0
+				c = 0
+				x = nx[randint(0,len(nx)-1)]
+				y = ny[randint(0,len(ny)-1)]
+				print(x,"x",y,"=")
+				r = int(input())
+				p = x*y
+				if r == p:
+					print()
+					complimento = complimenti[randint(0,4)]
+					print(complimento)
+					n += 1
+				else:
+					print()
+					insulto = insulti[randint(0,4)]
+					print(insulto)
+				while (i < len(nx)):
+					if (nx[i] == x):
+						del nx[i]
+					i += 1
+				while (c < len(ny)):
+					if (ny[c] == y):
+						del ny[c]
+					c += 1
+			print(t)
+			print(n)
+			s = (t/3)*2
+			if t > 10:
+				if n > s:
+					break
+print("Esercitazione terminata!")
 	print()
 	print("E ora cosa vuoi fare?")
 	print("A. Terminare l'esercitazione")
 	print("B. Ripetere l'esercitazione")
 	risposta1 = input().upper()
-	if risposta == "A":
+	if risposta1 == "A":
 		break
 	else:
 		print()
