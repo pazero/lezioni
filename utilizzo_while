@@ -4,9 +4,9 @@ user = input("")
 print()
 print("Inserisci la password:")
 password = input("")
-while user != "pincopallino" and password != "vivalapizza":
+while user != "pincopallino" or password != "vivalapizza":
 	print()
-	print("L'USER E LA PASSWORD NON SONO CORRETTI!")
+	print("L'USER O LA PASSWORD NON SONO CORRETTI!")
 	print()
 	user = input("Inserisci nuovamente l'user:")
 	print()
